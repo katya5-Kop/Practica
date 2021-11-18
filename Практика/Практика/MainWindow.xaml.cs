@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using MySql.Data;
 namespace Практика
 {
     /// <summary>
@@ -23,6 +23,35 @@ namespace Практика
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            /*     string StringConnection = "server=localhost;user id=root;password=root;database=database_book";
+           
+            MySqlConnection connection = new MySqlConnection(StringConnection);
+            try
+            {
+               
+                connection.Open();
+                MessageBox.Show($"Произошла ошибка подключения к БД - {connection.State}");
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show($"Произошла ошибка подключения к БД - {error.Message}");
+                connection.Close();
+            }*/
+            Global global1 = new Global();
+
+             if (!String.IsNullOrEmpty(global1.CheckConnection()))
+             {
+                 MessageBox.Show("Подключение прошло успешно");
+             }
+             else
+             {
+                 MessageBox.Show("Произошла ошибка подключения");
+
+             }
         }
     }
 }
