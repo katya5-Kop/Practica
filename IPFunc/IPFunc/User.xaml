@@ -1,0 +1,41 @@
+﻿<Window x:Class="IPFunc.User"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPFunc"
+        mc:Ignorable="d"
+        Title="Управление администраторами" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="185*"/>
+            <ColumnDefinition Width="322*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="60*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="tblUserLogin" Text="Логин:" FontSize="17"  Margin="6,12,171.6,52" Height="20" Width="112"/>
+        <TextBlock Name="tblUserPass" Text="Пароль:" FontSize="17" Margin="10,17,191.6,47" Height="20" Width="88" Grid.Row="1"/>
+        <TextBlock Name="tblLastName" Text="Фамилия:" FontSize="17"  Margin="10,0,194.6,64" Height="20" Width="85" Grid.Row="2"/>
+        <TextBlock Name="tblFirstName" Text="Имя:" FontSize="17" Margin="10,10,147.6,54" Height="20" Width="131" Grid.Row="3"/>
+
+        <TextBox Name="tbUserLogin" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0" Height="30" Width="150" Margin="5,26,0,5"/>
+        <TextBox Name="tbUserPass" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="1" Height="30" Width="150" Margin="5,25,0,5"/>
+        <TextBox Name="tbLastName" VerticalAlignment="Center" HorizontalAlignment="Left" Grid.Column="0" Grid.Row="2" Height="30" Width="150" Margin="5,25,0,5"/>
+        <TextBox Name="tbFirstName" Height="30" Width="150" Margin="10,35,129.6,19" Grid.Row="3"/>
+        <Button x:Name="btnAddUser" Content="Добавить" Width="150" Height="30"  Margin="6,27,133.6,27" Grid.Row="4" Click="btnAddUser_Click"  />
+        <Button x:Name="btnSave" Content="Изменить" Width="150" Height="30" Margin="180,27,463.6,27" Grid.ColumnSpan="2" Grid.Row="4" Click="btnSave_Click_1"/>
+        <Button x:Name="btnDelate" Content="Удалить" Width="150" Height="30"  Margin="64.4,27,289.6,27" Grid.Column="1" Grid.Row="4" Click="btnDelate_Click_1" />
+
+
+        <DataGrid Name="dgUser" Grid.Column="1" Grid.RowSpan="4" Margin="10.4,12,-0.4,8" >
+
+        </DataGrid>
+
+    </Grid>
+</Window>

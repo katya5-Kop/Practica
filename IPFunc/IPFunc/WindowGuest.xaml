@@ -1,0 +1,31 @@
+﻿<Window x:Class="IPFunc.WindowGuest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IPFunc"
+        mc:Ignorable="d"
+        Title="WindowGuest" Height="450" Width="800">
+    <Grid>
+
+        <Label Content="Описание" FontSize="20" HorizontalAlignment="Left" Margin="315,270,0,0" VerticalAlignment="Top"/>
+        <Label Name="lblTitle" Content="Дата издания: 1965" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="325,51,0,0"/>
+        <Label  Name="lblAuthor" Content="Автор: Себастьян Жапризо" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="325,26,0,0"/>
+        <Label Name="lblDate" Content="Название: Ловушка для золушки" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="325,0,0,0"/>
+        <RichTextBox Name="rhDes" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="668,10,0,0">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <ListBox x:Name="listBook" HorizontalAlignment="Left" Height="420" VerticalAlignment="Top" Width="249"/>
+        <ListView HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="477" Margin="291,307,0,0" SelectionChanged="ListView_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>
